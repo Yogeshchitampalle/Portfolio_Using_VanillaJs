@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive portfolio </title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+    
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo">Dev_Yogi</a>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#features">Skills</a>
+        <a href="#Blogs">Blogs</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+</header>
+<!-- header section ends -->
+
+<!-- home section starts  -->
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Well Come</h3>
+        <p>this is my Work..👇</p>
+        <!-- <a href="https://github.com/Yogeshchitampalle" class="btn"> My Project</a> -->
+    </div>
+
+    <div class="swiper-container image-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/shot-01.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/boleto.PNG" alt=""></div>
+            <div class="swiper-slide"><img src="images/car game.PNG" alt=""></div>
+            <div class="swiper-slide"><img src="images/news_page.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/shot-02.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/movie_app.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="images/flappy.PNG" alt=""></div>
+            <div class="swiper-slide"><img src="images/musicify.PNG" alt=""></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading">about me</h1>
+
+<div class="row">
+        
+    <div class="image">
+        <img src="images/myimg.jpg" alt="">
+    </div>    
+
+    <div class="content">
+        
+        <p> "Hello, my name is Yogesh  and I am a passionate frontend developer. Prior to my career in web development, 
+            I worked as a quality engineer in the mechanical field, where I developed strong analytical and problem-solving skills. I have since transitioned to frontend development, where I have gained experience in HTML, CSS, JavaScript, and various frontend frameworks 
+            I am dedicated to creating high-quality, responsive, and user-friendly websites that help businesses achieve their goals.
+            Take a look at my portfolio and click on github link to see my recent projects." </p>
+        
+    </div>
+
+</div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- features section starts  -->
+
+<section class="features" id="features">
+
+    <h1 class="heading">My Skills</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-magic"></i>
+            <h3>Frontend Dev</h3>
+            <p>HTML 5</p>
+            <p>CSS 3</p>
+            <p>Tailwind</p>
+            
+        </div>
+        <div class="box">
+            <i class="fas fa-cogs"></i>
+            <h3>Libraries & frameworks</h3>
+            <p>React 18</p>
+            <p>Axios</p>
+            <p>Bootstrap</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Database Management</h3>
+            <p>MySQL</p>
+            <p>MongoDB</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe"></i>
+            <h3>Codding language</h3>
+            <p>JavaScript</p>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Blog section -->
+<div class="container">
+    <section class="blog" id="Blogs">
+      <h2>My Blog's</h2>
+      <div class="blog-list">
+        <article class="blog-post">
+          <h3 class="blog_desc">"Journey Of Quality Engineer to Frontend Developer"</h3>
+          <a href="https://yogichi95.blogspot.com/2023/04/blog-post.html" class="read-more-btn">Read More>></a>
+        </article>
+        <article class="blog-post">
+          <h3 class="blog_desc">"10 HTML5 Features Every Front-End Developer Needs to Master "</h3>
+          <a href="https://yogichi95.blogspot.com/2023/04/10-html5-features-every-front-end.html" class="read-more-btn">Read More>></a>
+        </article>
+      </div>
+    </section>
+  </div>
+  
+<!-- Blog section end-->  
+
+<section class="resume">
+    <h1 class="heading1">Download My CV</h1> 
+    <br>
+    <input type="button" class="cv_btn" value="Click here" onclick="openPdf()">
+  </section>
+  
+
+<!-- features section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading">get in touch</h1>
+    <form action="">
+
+        <div class="inputBox">
+            <input type="text" id="name" required placeholder="Enter your name">
+            <label hidden >name</label> 
+        </div>
+        <div class="inputBox">
+            <input type="email" id="email" required placeholder="Enter your email ">
+            <label hidden>email</label>
+        </div>
+        <div class="inputBox">
+            <input type="number" id="number" required placeholder="Enter your phone Number">
+            <label hidden>number</label>
+        </div>
+        <div class="inputBox">
+            <textarea required name="" id="message" cols="30" rows="10"  placeholder="Enter your message"></textarea>
+            <label hidden >message</label>
+        </div>
+
+        <input type="submit" class="btn" value="send message">
+
+    </form>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+    <div class="share">
+        <a href="https://github.com/Yogeshchitampalle" class="fab fa-git"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/chitampalle-yogesh084b41158/" class="fab fa-linkedin"></a>
+    </div>
+
+    <h1 class="credit"> created by <span> yogichi95 </span> | &copy; 2023  all rights reserved! </h1>
+
+</section>
+
+<!-- footer section ends -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script src="index.js"></script>
+</body>
+</html>
