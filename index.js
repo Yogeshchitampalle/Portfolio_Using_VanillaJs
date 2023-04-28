@@ -27,6 +27,10 @@ menu.addEventListener('click', () => {
     // Toggle the 'fa-times' class on the menu bar icon and the 'nav-toggle' class on the navbar element
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('nav-toggle');
+    // Add an else statement to remove the 'nav-toggle' class when the menu icon is clicked again to close the navbar
+    if (!navbar.classList.contains('nav-toggle')) {
+        navbar.classList.remove('nav-toggle');
+    }
 });
 
 // Add an onscroll event listener to the window
@@ -35,8 +39,10 @@ window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('nav-toggle');
 }
+
+
 function openPdf() {
-    var pdfFile = "pdf/mypdf.pdf";
+    var pdfFile = "pdf/yogichi95@resume.pdf";
     window.open(pdfFile);
 }
 //email service id service_fye2exr
