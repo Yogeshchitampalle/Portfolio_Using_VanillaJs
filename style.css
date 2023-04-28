@@ -378,6 +378,11 @@ h2{
 }
 
 /* media queries */
+<<<<<<< HEAD
+=======
+
+/* 
+>>>>>>> ef903982ea213ad58517c9263d6ee8102b54ba2a
 @media (max-width:991px){
 
   html{
@@ -489,9 +494,12 @@ h2{
   }
 
 } */
+<<<<<<< HEAD
 
 
 /* 
+=======
+>>>>>>> ef903982ea213ad58517c9263d6ee8102b54ba2a
 @media (max-width:991px){
 
   html{
@@ -601,4 +609,8 @@ h2{
   font-size: 3.5rem;
   }
   
+<<<<<<< HEAD
   } */
+=======
+  }
+>>>>>>> ef903982ea213ad58517c9263d6ee8102b54ba2a
