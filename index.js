@@ -42,7 +42,7 @@ window.onscroll = () => {
 
 
 function openPdf() {
-    var pdfFile = "pdf/yogichi95@resume.pdf";
+    var pdfFile = "pdf/Yogichi@Resume.pdf";
     window.open(pdfFile);
 }
 //email service id service_fye2exr
