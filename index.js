@@ -18,31 +18,19 @@ swiper = new Swiper(".image-slider", {
     },
 })
 
-// Select the menu bar icon and navbar element
-menu = document.querySelector('#menu-bar');
-navbar = document.querySelector('.navbar');
-
 // Add a click event listener to the menu bar icon
-menu.addEventListener('click', () => {
-    // Toggle the 'fa-times' class on the menu bar icon and the 'nav-toggle' class on the navbar element
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('nav-toggle');
-    // Add an else statement to remove the 'nav-toggle' class when the menu icon is clicked again to close the navbar
-    if (!navbar.classList.contains('nav-toggle')) {
-        navbar.classList.remove('nav-toggle');
-    }
+document.addEventListener('DOMContentLoaded', function () {
+  const menuIcon = document.getElementById('menu-bar');
+  const navbar = document.querySelector('.navbar');
+
+  menuIcon.addEventListener('click', function () {
+    menuIcon.classList.toggle('active');
+    navbar.classList.toggle('active');
+  });
 });
 
-// Add an onscroll event listener to the window
-window.onscroll = () => {
-    // Remove the 'fa-times' and 'nav-toggle' classes from the menu bar icon and navbar element, respectively
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('nav-toggle');
-}
-
-
 function openPdf() {
-    var pdfFile = "pdf/Yogichi@Resume.pdf";
+    var pdfFile = "pdf/Frontend_Resume.pdf";
     window.open(pdfFile);
 }
 //email service id service_fye2exr
@@ -83,4 +71,20 @@ function sendEmail() {
     event.preventDefault();
     sendEmail();
   });
-  
+
+
+  function checkScreenSize() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 768) {
+      // Code to execute for smaller screens (e.g., mobile devices)
+      // Example: document.body.style.backgroundColor = 'red';
+    } else {
+      // Code to execute for larger screens (e.g., desktops)
+      // Example: document.body.style.backgroundColor = 'blue';
+    }
+  }
+
+  // Call the function on page load and whenever the window is resized
+  window.addEventListener('load', checkScreenSize);
+  window.addEventListener('resize', checkScreenSize);
