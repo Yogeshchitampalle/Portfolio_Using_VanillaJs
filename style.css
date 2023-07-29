@@ -60,6 +60,7 @@ section{
 }
 
 header{
+  display: flex;
   position: fixed;
   top:0; left: 0; right:0;
   background:var(--black);
@@ -73,8 +74,11 @@ header{
 
 header .logo{
   font-weight: bolder;
-  color:#fff;
+  color:var(--red);
   font-size: 2.5rem;
+}
+.navbar{
+  display: flex;
 }
 
 header .navbar a{
@@ -93,6 +97,60 @@ header .navbar a:hover{
   cursor: pointer;
   display: none;
 } 
+#menu-bar:before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+#menu-bar:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  /* Show the menu icon on smaller screens */
+  #menu-bar {
+    display: block;
+  }
+
+  .navbar {
+    display: none; /* Hide the navigation links by default on smaller screens */
+    flex-direction: column;
+    background-color:#272D3B;
+    opacity: 0.6;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+  }
+
+  .navbar a {
+    padding: 1rem 2rem;
+  }
+
+  .navbar a:hover {
+    background-color: #555;
+  }
+
+  /* Show the navigation links when the menu icon is clicked */
+  #menu-bar.active:before {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  #menu-bar.active:after {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  #menu-bar.active + .navbar {
+    display: flex;
+  }
+}
 
 .home {
   background: url(./images/home-bg.jpg) no-repeat;
@@ -587,3 +645,31 @@ header .navbar a:hover{
 }
 }
 
+body {
+  font-size: 200;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the marquee container */
+.marquee-container {
+  width: 300%;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Style for the marquee content */
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marqueeAnimation 15s linear infinite;
+}
+
+/* Keyframes for the marquee animation */
+@keyframes marqueeAnimation {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
